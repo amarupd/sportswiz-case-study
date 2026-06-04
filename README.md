@@ -1,4 +1,5 @@
 # 🏏 Sportswiz Architecture Case Study
+![License](https://img.shields.io/badge/license-MIT-green)
 
 > Production-grade cricket ecosystem architecture, system design, and engineering case study inspired by large-scale sports platforms such as Cricbuzz.
 
@@ -210,9 +211,14 @@ This project demonstrates practical experience with:
 
 ---
 
-# License
+## License
 
-This repository is intended for educational, portfolio, and architecture demonstration purposes.
+This repository is licensed under the MIT License.
+
+The content in this repository is intended for educational, architectural, and portfolio demonstration purposes.
+
+No proprietary company code, internal implementations, or confidential business logic are included.
+
 
 
 ## Repository Statistics
