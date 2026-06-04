@@ -1,0 +1,52 @@
+```mermaid
+flowchart TD
+
+Users[Users & Mobile Apps]
+
+Users --> CloudFront
+
+CloudFront --> NextJS
+
+NextJS --> ALB
+
+ALB --> API1[NestJS API Instance 1]
+ALB --> API2[NestJS API Instance 2]
+ALB --> API3[NestJS API Instance 3]
+
+API1 --> Redis
+API2 --> Redis
+API3 --> Redis
+
+API1 --> RabbitMQ
+API2 --> RabbitMQ
+API3 --> RabbitMQ
+
+API1 --> RDS[(MySQL Primary)]
+API2 --> RDS
+API3 --> RDS
+
+RDS --> Replica1[(Read Replica 1)]
+RDS --> Replica2[(Read Replica 2)]
+
+RabbitMQ --> Worker1[Stats Worker]
+RabbitMQ --> Worker2[Cache Worker]
+RabbitMQ --> Worker3[Notification Worker]
+RabbitMQ --> Worker4[Analytics Worker]
+
+Worker1 --> RDS
+Worker2 --> Redis
+Worker3 --> Redis
+Worker4 --> RDS
+
+Redis --> Socket1[Socket.IO Server 1]
+Redis --> Socket2[Socket.IO Server 2]
+Redis --> Socket3[Socket.IO Server 3]
+
+Socket1 --> Users
+Socket2 --> Users
+Socket3 --> Users
+
+CloudWatch --> Monitoring[Monitoring & Alerts]
+Prometheus --> Monitoring
+Grafana --> Monitoring
+```

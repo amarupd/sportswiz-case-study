@@ -213,3 +213,46 @@ This project demonstrates practical experience with:
 # License
 
 This repository is intended for educational, portfolio, and architecture demonstration purposes.
+
+
+## Repository Statistics
+
+### Architecture Areas Covered
+
+- Realtime Systems
+- Distributed Systems
+- Event Driven Architecture
+- Caching Strategy
+- Database Design
+- Infrastructure Design
+- Scaling Strategy
+- Monitoring & Observability
+- Disaster Recovery
+
+---
+
+### Engineering Topics
+
+- NestJS Architecture
+- Redis Caching
+- RabbitMQ Messaging
+- Socket.IO Scaling
+- MySQL Optimization
+- AWS Infrastructure
+- CI/CD Pipelines
+- High Availability Design
+
+---
+
+### Author
+
+**Amar Dutt Upadhyay**
+
+Full Stack Engineer
+
+Tech Stack:
+
+Node.js • NestJS • React.js • Next.js • MySQL • Redis • RabbitMQ • AWS
+
+GitHub: [Amar](https://github.com/amarupd)
+LinkedIn: [linkedin](https://www.linkedin.com/in/amar-upd/?skipRedirect=true)

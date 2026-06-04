@@ -1,0 +1,32 @@
+```mermaid
+sequenceDiagram
+
+participant Scorer
+participant API
+participant MySQL
+participant RabbitMQ
+participant Worker
+participant Redis
+participant Socket
+participant User
+
+Scorer->>API: Submit Ball Event
+
+API->>MySQL: Save Ball
+
+MySQL-->>API: Success
+
+API->>RabbitMQ: Publish score.updated
+
+RabbitMQ->>Worker: Consume Event
+
+Worker->>Redis: Refresh Match Cache
+
+Redis-->>Worker: Success
+
+Worker->>Socket: Broadcast Update
+
+Socket-->>User: Live Score Update
+
+User-->>Socket: Acknowledge
+```

@@ -1,0 +1,29 @@
+```mermaid
+flowchart TD
+
+Developer
+
+Developer --> GitHub
+
+GitHub --> CI[GitHub Actions]
+
+CI --> Lint
+
+Lint --> Test
+
+Test --> Build
+
+Build --> Docker
+
+Docker --> Registry
+
+Registry --> Staging
+
+Staging --> SmokeTests
+
+SmokeTests --> Production
+
+Production --> Monitoring
+
+Monitoring --> Alerts
+```

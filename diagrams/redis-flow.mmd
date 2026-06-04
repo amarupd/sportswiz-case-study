@@ -1,0 +1,29 @@
+```mermaid
+flowchart LR
+
+Client --> API
+
+API --> Redis
+
+Redis -->|Cache Hit| Response
+
+Redis -->|Cache Miss| MySQL
+
+MySQL --> Redis
+
+Redis --> Response
+
+Redis --> PubSub
+
+PubSub --> Socket1
+
+PubSub --> Socket2
+
+PubSub --> Socket3
+
+Socket1 --> Users
+
+Socket2 --> Users
+
+Socket3 --> Users
+```

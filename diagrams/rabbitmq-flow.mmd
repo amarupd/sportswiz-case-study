@@ -1,0 +1,33 @@
+```mermaid
+flowchart LR
+
+ScoreUpdate[score.updated]
+
+ScoreUpdate --> Exchange
+
+Exchange --> ScoreQueue
+Exchange --> StatsQueue
+Exchange --> CacheQueue
+Exchange --> NotificationQueue
+Exchange --> AnalyticsQueue
+
+ScoreQueue --> ScoreWorker
+
+StatsQueue --> StatsWorker
+
+CacheQueue --> CacheWorker
+
+NotificationQueue --> NotificationWorker
+
+AnalyticsQueue --> AnalyticsWorker
+
+ScoreWorker --> MySQL
+
+StatsWorker --> MySQL
+
+CacheWorker --> Redis
+
+NotificationWorker --> Users
+
+AnalyticsWorker --> Reports
+```
